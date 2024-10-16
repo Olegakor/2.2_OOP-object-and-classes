@@ -14,7 +14,7 @@ data class Post(
     val likes: LikesInfo = LikesInfo()
 )
 
-// класс описания комментариев к записи
+// класс описания комментариев к посту
 class CommentsInfo (
     var count: Int = 0,
     var canPost: Boolean = true,
@@ -22,7 +22,7 @@ class CommentsInfo (
     var canClose: Boolean = false,
     var canOpen: Boolean = false
     ) {
-    override fun equals(other: Any?): Boolean {// !!!!!!!!!!!!!!!!!!!!!!!
+    override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
 
@@ -47,13 +47,13 @@ class CommentsInfo (
     }
 }
 
-// класс описания лайков к записи
+// класс описания лайков к посту
 class LikesInfo {
     var count: Int = 0
     var userLikes: Boolean = true
     var canLike: Boolean = true
     var canPublish: Boolean = true
-    override fun equals(other: Any?): Boolean {// !!!!!!!!!!!!!!!!!!!!!!!!!!
+    override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
 
