@@ -15,7 +15,7 @@ data class Post(
 )
 
 // класс описания комментариев к посту
-class CommentsInfo (
+data class CommentsInfo (
     var count: Int = 0,
     var canPost: Boolean = true,
     var groupsCanPost: Boolean = false,
@@ -48,11 +48,12 @@ class CommentsInfo (
 }
 
 // класс описания лайков к посту
-class LikesInfo {
-    var count: Int = 0
-    var userLikes: Boolean = true
-    var canLike: Boolean = true
+data class LikesInfo (
+    var count: Int = 0,
+    var userLikes: Boolean = true,
+    var canLike: Boolean = true,
     var canPublish: Boolean = true
+) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false

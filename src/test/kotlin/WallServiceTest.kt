@@ -27,13 +27,13 @@ class WallServiceTest {
         val post = Post(0)
         service.add(post)
         val result = service.update(Post(1,text = "upgradeText"))
-        assertEquals(true, result)
+        assertTrue(result)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
     // тест метода обновления постов на ложь
     @Test
     fun updateFalse() {
         val result = service.update(Post(1,text = "upgradeText"))
-        assertEquals(false, result)
+        assertFalse(result)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 }
