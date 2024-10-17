@@ -1,4 +1,4 @@
-// Data-класс Post
+// Data-класс Post// for github actions
 data class Post(
     val id: Int = 0,
     val ownerId: Int = 0,
